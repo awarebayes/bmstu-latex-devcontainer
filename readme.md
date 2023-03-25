@@ -23,9 +23,7 @@
 2. Docker
 3. Расширение [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) из магазина расширений VSCode (сам попросит поставить)
 
-Внутри лежит пример моего НИР, переписанный ChatGPT так, как будто его писал гопник.
-
-## Вот readme написанный гопником:
+Внутри лежит [пример моего НИР](https://github.com/awarebayes/bmstu-latex-devcontainer/blob/master/src/report/report.pdf), переписанный ChatGPT так, как будто его писал гопник.
 
 # BMSTU/GOST DevContainer
 
