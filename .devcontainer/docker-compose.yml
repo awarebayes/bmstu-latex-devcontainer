@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  texlive:
+    build: .
+    environment:
+      SHELL: "/bin/bash"
+    command: sleep infinity
+    volumes:
+      - ../:/workdir

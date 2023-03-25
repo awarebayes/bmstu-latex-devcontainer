@@ -1,0 +1,41 @@
+{
+    "name": "latex-env",
+    "dockerComposeFile": "docker-compose.yml",
+    "extensions": [
+        "james-yu.latex-workshop"
+    ],
+    "service": "texlive",
+    "settings": {
+        "terminal.integrated.shell": "/bin/bash",
+        "latex-workshop.latex.autoBuild.interval": 0,
+        "latex-workshop.latex.autoBuild.run": "onFileChange",
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.synctex.afterBuild.enabled": true,
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.tools": [
+            {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "%DOC%"
+            ],
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+        
+    ],
+    },
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workdir"
+} 
