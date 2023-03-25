@@ -1,4 +1,4 @@
-# BMSTU/GOST DevContainer
+# BMSTU/GOST [DevContainer](https://code.visualstudio.com/docs/devcontainers/containers)
 
 
 ## What?
