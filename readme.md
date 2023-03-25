@@ -34,7 +34,7 @@
 
 Внутри лежит [пример моего НИР](https://github.com/awarebayes/bmstu-latex-devcontainer/blob/master/src/report/report.pdf), переписанный ChatGPT так, как будто его писал гопник.
 
-# BMSTU/GOST DevContainer
+# BMSTU/GOST DevContainer gopnik powered by OpenAi Edition
 
 Запускай свой хуй внутри контейнера, ебашь диплом без проблем
 
