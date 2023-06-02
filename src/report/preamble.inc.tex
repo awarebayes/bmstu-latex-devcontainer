@@ -5,7 +5,7 @@
 % Для работы с несколькими языками и шрифтом Times New Roman по-умолчанию
 \usepackage[english,russian]{babel}
 \usepackage{fontspec}
-\setmainfont{Times New Roman Cyr}
+\setmainfont{Times New Roman}
 \usepackage[left=30mm,right=10mm,top=20mm,bottom=20mm]{geometry}
 \usepackage{misccorr}
 \usepackage{indentfirst}
@@ -35,11 +35,11 @@
 
 \titleformat{\subsection}[hang]
 {\bfseries\normalsize}{\thesubsection}{1em}{}
-\titlespacing\subsection{\parindent}{12mm}{12mm}
+\titlespacing\subsection{\parindent}{12mm}{0mm}
 
 \titleformat{\subsubsection}[hang]
 {\bfseries\normalsize}{\thesubsubsection}{1em}{}
-\titlespacing\subsubsection{\parindent}{12mm}{12mm}
+\titlespacing\subsubsection{\parindent}{12mm}{0mm}
 
 \titleformat{name=\section}[block]
 {\normalfont\normalsize\bfseries\hspace{\parindent}}
@@ -51,6 +51,9 @@
 {}
 {0pt}
 {}
+
+\titlespacing\section{0mm}{0mm}{0mm}
+\titlespacing\chapter{0mm}{-12mm}{0mm}
 
 \newcommand{\anonsection}[1]{%
 	\section*{\centering#1}%
@@ -85,40 +88,28 @@
 \hypersetup{citecolor=black}
 
 \usepackage{listings}
-\lstset{
-	basicstyle=\footnotesize\ttfamily,
-	language=XML, % Или другой ваш язык -- см. документацию пакета
-	commentstyle=\color{comment},
-	numbers=left,
-	numberstyle=\tiny,
-	numbersep=5pt,
-	tabsize=4,
-	extendedchars=\true,
-	breaklines=true,
-	keywordstyle=\color{blue},
-	frame=b,
-	stringstyle=\ttfamily\color{string}\ttfamily,
-	showspaces=false,
-	showtabs=false,
-	xleftmargin=17pt,
-	framexleftmargin=17pt,
-	framexrightmargin=5pt,
-	framexbottommargin=4pt,
+% Для листинга кода:
+\lstset{ %
+	basicstyle=\small\ttfamily,			% размер и начертание шрифта для подсветки кода
+	numbers=none,						% где поставить нумерацию строк (слева\справа)
+	%numberstyle=,					% размер шрифта для номеров строк
+	%stepnumber=1,						% размер шага между двумя номерами строк
+	%numbersep=5pt,						% как далеко отстоят номера строк от подсвечиваемого кода
+	frame=single,						% рисовать рамку вокруг кода
+	tabsize=4,							% размер табуляции по умолчанию равен 4 пробелам
+	captionpos=t,						% позиция заголовка вверху [t] или внизу [b]
+	breaklines=true,					
+	breakatwhitespace=true,				% переносить строки только если есть пробел
+	backgroundcolor=\color{white},
 	showstringspaces=false,
-	inputencoding=utf8x,
-	keepspaces=true
+	extendedchars=true,
+	escapeinside=§§
 }
 
 \DeclareCaptionLabelSeparator{line}{\ --\ }
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43,0.35,0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
 \captionsetup[lstlisting]{
-	format=listing,
-	labelfont=white,
-	textfont=white,
 	singlelinecheck=false,
 	margin=0pt,
-	font={bf,footnotesize},
 	labelsep=line
 }
 
