@@ -1,40 +1,6 @@
-# BMSTU/GOST [DevContainer](https://code.visualstudio.com/docs/devcontainers/containers)
-
-
-## What?
-
-Запускает проект твоей будущей курсовой /диплома внутри докер-контейнера, интегрированного с vscode.
-
-1. Ставит Latex, XeLatex, Bibtex, latex-lang-cur, TimesNewRoman.
-
-2. Скачивает расширение vscode-latex-workshop
-
-3. Устанавливает необходимые настройки и recipies
-
-4. Подключает гост-файл (не гарантирую гост, но вроде он)
-
-Написание латеха будет происходить полностью внутри докера после установки.
-
-Коммитить изменения лучше не внутри докера, т.к. там не настроен git/ssh ключи, а с хоста.
-
-## Why?
-
-1. Только что поставил дистро и решил установить латех сразу в докер.
-2. VSCode лучше чем web based IDE по типу OverLeaf. У него есть vim emulation, темные темы, шорткаты, etc.
-3. У меня Mac и ArchLinux, хочется общего опыта разработки.
-4. Я долго ебался с xelatex на арче, он почему то никак не хотел работать
-
-
-## Что нужно
-
-1. Visual Studio Code
-2. Docker
-3. Расширение [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) из магазина расширений VSCode (сам попросит поставить)
-4. Этот репозиторий на гитхабе - шаблон. Сверху есть кнопочка use this template.
-
-Внутри лежит [пример моего НИР](https://github.com/awarebayes/bmstu-latex-devcontainer/blob/master/src/report/report.pdf), переписанный ChatGPT так, как будто его писал гопник.
-
 # BMSTU/GOST DevContainer gopnik powered by OpenAi Edition
+
+**zalupa ne uzaite**
 
 Запускай свой хуй внутри контейнера, ебашь диплом без проблем
 
